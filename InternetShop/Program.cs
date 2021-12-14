@@ -18,7 +18,7 @@ namespace InternetShop
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new OtherForm.Login());
-            //привет полина
+            //привет полина как дела у тебя
         }
     }
 }
