@@ -18,6 +18,7 @@ namespace InternetShop
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new OtherForm.Login());
+            //тема привет
         }
     }
 }
