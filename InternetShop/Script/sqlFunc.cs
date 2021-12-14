@@ -10,6 +10,7 @@ namespace InternetShop.Script
 {
     class sqlFunc
     {
+        //Привет как дела
         public static MySqlConnection GetDBConnection(string host, int port, string database, string username, string password)
         {
             // Connection String.
