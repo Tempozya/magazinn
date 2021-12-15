@@ -106,20 +106,20 @@ namespace InternetShop.Script
 
 
 
-        public ArrayList gethistory()
+        public ArrayList getgoods()
         {
-            ArrayList history = new ArrayList();
-            string sql = String.Format("SELECT * FROM orders");
+            ArrayList goods = new ArrayList();
+            string sql = String.Format("SELECT * FROM rangeGoods");
             MySqlCommand command = new MySqlCommand(sql, conn);
             conn.Open();
             MySqlDataReader dataReader = command.ExecuteReader();
             foreach (DbDataRecord result in dataReader)
             {
-                history.Add(result);
+                goods.Add(result);
 
             }
             conn.Close();
-            return history;
+            return goods;
         }
 
 

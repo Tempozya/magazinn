@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InternetShop.Script;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,17 @@ namespace InternetShop.Admin
 {
     public partial class ranqe : Form
     {
+        sqlFunc sf = new sqlFunc();
+
         public ranqe()
         {
             InitializeComponent();
+        }
+
+        private void ranqe_Load(object sender, EventArgs e)
+        {
+            dataGridViewgoods.DataSource = sf.getgoods();
+
         }
     }
 }
