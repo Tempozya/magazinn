@@ -123,6 +123,25 @@ namespace InternetShop.Script
         }
 
 
+        public DataTable getCatalog()
+        {
+            DataTable data = new DataTable();
+            data.Clear();
+            conn.Open();
+
+            string sql = String.Format("SELECT * FROM rangeGoods ");
+            MySqlCommand command = new MySqlCommand(sql, conn);
+
+            MySqlDataReader sqldr = command.ExecuteReader();
+            data.Load(sqldr);
+
+
+            conn.Close();
+            return data;
+        }
+
+
+
 
     }
 }
